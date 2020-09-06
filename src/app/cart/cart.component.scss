@@ -1,0 +1,118 @@
+h1{
+    text-align: center;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+    grid-auto-rows: 4em;
+    grid-gap: 2em 2.5em;
+    padding: 1em 1em;
+    .card{
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);  
+        grid-template-rows:1fr; 
+        place-items: center;
+        box-shadow: 0px 1px 5px #000000;
+        background:rgb(206, 223, 212);
+
+        .title{
+            grid-row: 1;
+            grid-column: 1;
+            font-weight: 700;
+            font-size: 20px;
+            color: rgb(33, 1, 36);
+        }
+        .image{
+            grid-row: 1;
+            grid-column: 2;
+            img{
+                height: 50%;
+                width: 50%;
+            }
+        }
+        .remove{
+            grid-row: 1;
+            grid-column: 4;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px #000000;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .quantity{
+            grid-row: 1;
+            grid-column: 3;
+        }
+    }
+}
+.remove:hover{
+    transform: scale(1.1);
+    
+}
+////////////////////@at-root
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .value-button {
+    display: inline-block;
+    margin: 0px;
+    width: 40px;
+    height: 5px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    color: rgb(33, 1, 36);
+  }
+  
+  .value-button:hover {
+    cursor: pointer;
+  }
+  form{
+    width: 5em;
+  }
+  input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 30px;
+    height: 28px;
+  }
+.quantity-text{
+    text-align: center;
+    font-size: 10px;
+}
+.buynow{
+  box-shadow: 0px 1px 3px #000000;
+  right: 2em;
+  bottom:1em;
+  padding: 5px 10px;
+  position:fixed;
+  background:rgb(229, 252, 245);
+  border-radius: 5px;
+  font-size: 20px;
+}
+.buynow:hover{
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  .wrapper{
+    grid-template-columns: repeat(auto-fill, minmax(100vw, 1fr));
+    grid-auto-rows: 4em;
+    grid-gap: 2em 2.5em;
+    padding:8px;
+    .card{
+      place-items: left;  
+      width:20em
+    }
+  }
+  form {
+    width: 5vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+} 

@@ -1,0 +1,26 @@
+<h1>YOUR CART</h1>
+<div class="wrapper" *ngFor="let cart of componentcart">
+    <div class="card">
+        <div class="title">
+            {{cart.title}}
+        </div>
+        <div class="img">
+            (image)
+        </div>
+        <div class="quantity">
+            <form>
+                <input type="number" id="number" name ="number" value="1"/>
+            </form>
+            <div class="quantity-text">
+                QUANTITY
+            </div>
+        </div>
+        <div class="remove" (click)=removeFromCart(cart);>
+            REMOVE
+        </div>
+    </div>
+</div>
+<div>
+    <button class="buynow" routerLink="/buynow">Buy Now</button>
+</div>
+

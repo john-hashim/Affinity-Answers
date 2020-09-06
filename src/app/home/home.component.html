@@ -1,0 +1,28 @@
+<div class="main">
+    <div class="home">
+        <div class="header">
+            <p class="p1 font-header">SHOPPING CART ASSESSMENT</p>
+            <button class="btn btn-cart" (click)="carttoggle()">CART</button>
+            <p class="p2 font-header">USERNAME</p>
+        </div>
+        <div class="second-row">
+            <div class="navbar1">
+                <p routerLink="/product1" >Mobile</p>
+                <p routerLink="/product2">Laptop</p>
+                <p routerLink="/product3">Tv</p>
+                <p routerLink="/product4">Ac</p>
+            </div>
+            <div class="products">
+                <router-outlet class="outlet" ></router-outlet>
+            </div>
+        </div>
+    </div>
+    <div class="cart" [hidden]="togglevalue">
+        <app-cart></app-cart>
+    </div>  
+    <div class="cart-number">
+        <p>
+            {{message}}
+        </p>
+    </div>
+</div>

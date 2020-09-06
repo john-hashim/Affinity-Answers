@@ -1,0 +1,16 @@
+<p class="heading">
+    Products under MOBILE
+</p>
+<div class="wrapper">
+    <div class="card" *ngFor="let mobile of mobiles"  >
+        <div class="title">
+            <p>{{ mobile.title }}</p>
+        </div>
+        <div class="image">
+            <img src="../../assets/Iphone SE.png" alt="">
+        </div>
+        <div class="add">
+            <button (click)="push(mobile)">ADD TO CART</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<p class="heading">
+    Products under TV
+</p>
+<div class="wrapper">
+    <div class="card" *ngFor="let tv of tvs">
+        <div class="title">
+            <p>{{ tv.title }}</p>
+        </div>
+        <div class="image">
+            <img src="../../assets/samsung-removebg-preview.png" alt="">
+        </div>
+        <div class="add">
+            <button (click)="push(tv)">ADD TO CART</button>
+        </div>
+    </div>
+</div>
