@@ -44,16 +44,18 @@ export class Product1Component implements OnInit {
   helpMenuOpen: string;
 
   mobiles=[
-    {title:'MOBILE1',img:'../../assets/Iphone SE.png',quantity:'1'},
-    {title:'MOBILE2',img:'../../assets/Iphone SE.png',quantity:'1'},
-    {title:'MOBILE3',img:'../../assets/Iphone SE.png',quantity:'1'},
-    {title:'MOBILE4',img:'../../assets/Iphone SE.png',quantity:'1'},
-    {title:'MOBILE5',img:'../../assets/Iphone SE.png',quantity:'1'},
-    {title:'MOBILE6',img:'../../assets/Iphone SE.png',quantity:'1'}
+    {title:'MOBILE1',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE2',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE3',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE4',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE5',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE6',img:'../../assets/Iphone SE.png',quantity:'1',price:5000},
+    {title:'MOBILE7',img:'../../assets/Iphone SE.png',quantity:'1',price:5000}
   ]
   push(mobile){
     this.cartservice.pushthashim(mobile);
     this.dataservice.changemessage(1)
+    console.log("item pushed")
   }
 
 

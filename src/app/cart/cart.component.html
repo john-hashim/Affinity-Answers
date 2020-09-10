@@ -1,26 +1,36 @@
-<h1>YOUR CART</h1>
-<div class="wrapper" *ngFor="let cart of componentcart">
-    <div class="card">
-        <div class="title">
-            {{cart.title}}
-        </div>
-        <div class="img">
-            (image)
-        </div>
-        <div class="quantity">
-            <form>
-                <input type="number" id="number" name ="number" value="1"/>
-            </form>
-            <div class="quantity-text">
-                QUANTITY
+<div class="main_cart">
+    <h1>YOUR CART</h1>
+    <div class="wrapper" *ngFor="let cart of componentcart">
+        <div class="card">
+            <div class="title">
+                {{cart.title}}
+            </div>
+            <div class="img">
+                <img src="../../assets/Iphone SE.png" alt="">
+            </div>
+            <div class="quantity">
+                <form>
+                    <input type="number" id="number" name ="number"[(ngModel)]="cart.quantity" (ngModelChange)="onQuantityChanges($event)" value="1"/>
+                </form>
+                <div class="quantity-text">
+                    {{cart.quantity}}
+                </div>
+            </div>
+            <div class="price">
+                {{cart.price}}
+            </div>
+            <div class="remove" (click)=removeFromCart(cart);>
+                REMOVE
             </div>
         </div>
-        <div class="remove" (click)=removeFromCart(cart);>
-            REMOVE
-        </div>
+    </div>
+    <div>
+        <button class="buynow" routerLink="/buynow">Buy Now</button>
+    </div>
+    <div class="total-price" >
+        totalprice={{totalprice}}{{quantity}}
     </div>
 </div>
-<div>
-    <button class="buynow" routerLink="/buynow">Buy Now</button>
-</div>
+
+
 

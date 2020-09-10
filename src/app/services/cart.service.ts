@@ -1,4 +1,6 @@
 import { Injectable,OnInit } from '@angular/core';
+import { Cart} from '../model/cart'
+
 
 
 @Injectable({
@@ -8,7 +10,7 @@ import { Injectable,OnInit } from '@angular/core';
 export class CartService implements OnInit{
   cartcount=0;
   flag=0;
-  servicecart:Array<object>=[];
+  servicecart:Cart[]=[];
   ngOnInit(){
   }
   pushthashim(data){
@@ -31,6 +33,7 @@ export class CartService implements OnInit{
         alert("Cart is full")
       }
     }
+    console.log(this.cartcount)
   }
   removeFromCart(data){
     let cartlenght=this.servicecart.length;
@@ -45,6 +48,9 @@ export class CartService implements OnInit{
     }
     this.servicecart.pop();
     this.cartcount--;
+
+  }
+  tottalamount(){
 
   }
 

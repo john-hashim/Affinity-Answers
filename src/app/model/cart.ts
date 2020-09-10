@@ -1,6 +1,7 @@
 export class Cart{
+    price:number;
     title:string;
     img:string;
-    quantity:string;
+    quantity:number;
     button:string;
 }

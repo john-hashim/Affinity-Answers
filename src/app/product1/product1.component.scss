@@ -23,12 +23,16 @@
             color:white
         }
         .image{
-            grid-column: 1/10;
+            grid-column: 1/11;
             grid-row: 2/9;
             img{
                 height: 140px;
                 width: 70px;
             }
+        }
+        .price{
+            grid-column:1/11;
+            grid-row: 8/10;
         }
         .add{
             grid-column: 1/10;

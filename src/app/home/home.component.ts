@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { DataserviceService } from '../services/dataservice.service'
+import { DataserviceService } from '../services/dataservice.service';
 
 
 @Component({
@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
   constructor(private cartservices:CartService,private dataservice:DataserviceService) { }
   count=0
 
-  message:number;
+  message:number
+  
   
   ngOnInit(): void {
     this.dataservice.currentMessage.subscribe(message=>this.message=message)
